@@ -1,0 +1,5 @@
+### GET a single person (invalid id)
+GET http://localhost:3001/api/persons/123
+
+### DELETE a single person (invalid id)
+DELETE http://localhost:3001/api/persons/123
