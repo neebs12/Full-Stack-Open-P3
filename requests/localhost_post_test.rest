@@ -1,0 +1,87 @@
+### add a single person (valid - one two parts)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Valid first part number",
+  "number": "123-45678"
+}
+
+### add a single person (valid - one two parts)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Another valid first part number",
+  "number": "12-345678"
+}
+
+### add a single person (invalid number - too short)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Number too short",
+  "number": "1234567"
+}
+
+### add a single person (invalid number - first part too short)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "First part too short",
+  "number": "1-2345678"
+}
+
+### add a single person (invalid number - first part too long)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "first part too long",
+  "number": "1234-2345678"
+}
+
+### add a single person (invalid number - too many parts)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "too many parts",
+  "number": "12-2345678-546"
+}
+
+### add a single person (invalid number)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "number too short",
+  "number": "1234567"
+}
+
+### add a single person (no number)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Johann Perez"
+}
+
+### add a single person (no name)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "number": "12-345678"
+}
+
+### add a single person (name too short)
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Jh",
+  "number": "12-345678"
+}
